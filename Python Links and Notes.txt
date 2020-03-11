@@ -1,0 +1,137 @@
+* Links:
+	Do / Read:
+		https://cjolowicz.github.io/posts/hypermodern-python-01-setup/ [Hypermodern Python - 6 chapters]
+		https://pynative.com/python-sqlite/ [Python SQLite tutorial]
+
+	Certification:
+		https://www.microsoft.com/en-us/learning/exam-98-381.aspx [Official Exam]
+		https://www.mindhub.com/mta-98-381-introduction-to-programming-using-python/p/MU-98-381 [Official Practice Test]
+
+	SQLite:
+		https://sqlite.org/index.html
+		https://www.sqlitetutorial.net/sqlite-tutorial/
+
+	Other:
+		http://www.web2py.com/
+		https://www.pythonanywhere.com/
+
+python -m venv myvenv
+myvenv\Scripts\activate.bat
+deactivate
+
+python -m pip freeze > requirements.txt
+python -m pip install -r requirements.txt
+
+==========
+
+Packages are generally directories
+	__init__.py
+Modules are generally files
+
+result = true_value if condition else false_value
+return tuple if immutable else list
+
+transposing tables ==> list(zip(*table))
+
+scientists = ['Marie Curie', 'Albert Einstein', 'Niels Bohr']
+sorted(scirneists, key=lambda name: name.split()[-1])
+last_name = lambda name: name.split()[-1]
+last_name("Nikola Tesla")
+
+def hypervolume(length, *lengths):
+	v = length
+	for item in lengths:
+		v *= item
+	return v
+
+==========
+
+#!/usr/bin/env python3
+import math [py.exe]
+from math import factorial
+from math import factorial as fac
+from words import (fetch_words, prints_words)
+/ = floating point division
+// = integer division
+List using [] = [1, 8, 4]
+Dict using {} = {'alice': 123, 'bob': 456}
+Tuple using ()
+
+words = ['Why', 'sometimes', 'I', 'have']
+[len)word) for word in words]
+comprehension is [ expr(item) for item in iterable if predicate(item) ]
+
+// Find the largest number whose square is less than 500
+s = math.sqrt(max([ (x * x) for x in range(500) if (x * x <= 500) ]))
+
+class Flight:
+	def __init__(self, number):
+		self._number = number
+
+	def number(self):
+		return self._number
+
+shallow copies?
+
+To only run the code from the command line and not the REPL
+if __name__ == 'main':
+	<execute function>
+
+class Program {
+
+	// Method to be used as second argument
+	public static bool IsLong(string word) {
+		return word.Length > 8;
+	}
+
+	static void Main(string[] args) {
+		// Array to be used as first argument
+		string[] adjectives = {"rocky", "mountainous", "cosmic", "extraterrestrial"};
+
+		string firstLongAdjective = Array.Find(adjectives, IsLong);
+		Console.WriteLine($"The first long word is: {firstLongAdjective}.");
+	}
+}
+
+class Program {
+	static void Main(string[] args) {
+		string[] spaceRocks = {"meteoroid", "meteor", "meteorite"};
+		bool makesContact = Array.Exists(spaceRocks, s => s == "meteorite");
+
+		if (makesContact) {
+			Console.WriteLine("At least one space rock has reached the Earth's surface!");
+		}
+	}
+}
+
+class Program {
+	static void Main(string[] args) {
+		int[] nums = {0, 555, 252, 3, 9, 101};
+		bool hasBigNum = Array.Exists(nums, isBig);
+		bool hasSmallNum = Array.Exists(nums, isSmall);
+		bool hasMediumNum = Array.Exists(nums, (n) => n >= 10 && n <= 100);
+
+		Console.WriteLine($"Any big #s? {hasBigNum}");
+		Console.WriteLine($"Any small #s? {hasSmallNum}");
+		Console.WriteLine($"Any medium #s? {hasMediumNum}");
+	}
+
+	static bool isBig(int n) => n > 100;
+	static bool isSmall(int n) => n < 10;
+}
+
+def convert(s):
+	try:
+		x = int(s)
+	except ValueError:
+		x = -1
+	except TypeError:
+		print("Not an integer!")
+		x = -1
+	except (ValueError, TypeError) as e:
+		print("Conversion error: {}".format(str(e)), file=sys.stderr)
+		pass
+		raise ValueError("Cannot compute square root of a negative number {}".format(x)))
+	finally:
+		pass
+	return x

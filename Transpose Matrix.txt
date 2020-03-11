@@ -1,0 +1,12 @@
+# https://www.geeksforgeeks.org/transpose-matrix-single-line-python/
+
+matrix = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+
+type(matrix)    # <class 'list'>
+type(matrix[0]) # <class 'tuple'>
+
+matrix          # [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+matrix[0]       # (1, 2, 3)
+
+zip_matrix = list(zip(*matrix))
+zip_matrix      # [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
